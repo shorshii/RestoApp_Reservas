@@ -56,14 +56,14 @@
                                 </select>
                             </div>
                             <div class="footer">
-                                <input id="reservarBtn" type="submit" class="btn btn-primary btn-lg" value="Reservar" onclick="JavaScript:displayReserva()"> </button>
+                                <input id="reservarBtn" type="submit" class="btn btn-primary btn-lg" value="Reservar" onclick="JavaScript:displayReserva()"> </input>
                             </div>
                         </div>         
                         <div class="col-sm-4">
                             <p>Bienvenido!</p>
                             <p>Aca puedes seleccionar la fecha de tu reserva. Te pedimos que selecciones la cantidad de comensales y la hora en la que vendrán.
                             <p> Los esperamos!</p>
-                            <!-- ACA ABAJO PONES LO QUE NECESITES Y YA QUEDA ENCOLUMNADO -->
+                           
 
 
                         </div>
