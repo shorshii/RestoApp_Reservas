@@ -1,0 +1,1 @@
+En la carpeta de CONTROLADOR hare todo lo correspondiente a los tratamientos de los datos
