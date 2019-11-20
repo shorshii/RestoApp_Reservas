@@ -36,11 +36,14 @@
                             <div class="col-sm-4">
                                 <p>Cantidad de  personas</p>
                                 <div class="form-group">
-                                    <select class="form-control" id="comensales" name="comensales">
+                                    <select class="form-control" id="personas" name="personas">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>Solicitar llamada para disponibilidad</option>
                                     </select>
                                 </div>
                                 <p>Hora</p>

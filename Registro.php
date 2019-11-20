@@ -36,16 +36,16 @@
                   <tr>
                   <?php
                   //Solo se dibuja el final de la tabla si los datos están seteados y vinieron de Reserva.php
-                    if(!empty($_POST['datepicker']) and !empty($_POST['hora']) and !empty($_POST['comensales'])){
+                    if(!empty($_POST['datepicker']) and !empty($_POST['hora']) and !empty($_POST['personas'])){
                       $fecha = $_POST['datepicker'];
                       $hora = $_POST['hora'];
-                      $comensales = $_POST['comensales'];
+                      $personas = $_POST['personas'];
                   
                   ?>
 
                     <td scope="row" > <?php echo $fecha; ?></td>
                     <td scope="row" > <?php echo $hora; ?> </td>
-                    <td scope="row" > <?php echo  $comensales; ?> </td>
+                    <td scope="row" > <?php echo  $personas; ?> </td>
                     
                   <?php
                     }
@@ -81,7 +81,7 @@
               </div>
               <input type="hidden"   name="fecha" value="<?php echo $fecha ?>">
               <input type="hidden"   name="hora" value="<?php echo $hora ?>">
-              <input type="hidden"   name="comensales" value="<?php echo $comensales ?>">
+              <input type="hidden"   name="personas" value="<?php echo $personas ?>">
               <button class="btn btn-primary" type="submit">Reservar</button>
             </form>
           </div>

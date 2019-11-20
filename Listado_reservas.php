@@ -37,6 +37,7 @@ error_reporting(E_ALL ^ E_WARNING);
             <th scope="col">Email</th>
             <th scope="col">Fecha</th>
             <th scope="col">Hora</th>
+            <th scope="col">Personas</th>
             <th> &nbsp;</th>
             <th> &nbsp;</th>
           </tr>
@@ -63,6 +64,7 @@ error_reporting(E_ALL ^ E_WARNING);
             <td > <?php echo $dato ["telefono"]; ?> </td>
             <td > <?php echo $dato ["fecha"]; ?> </td>
             <td > <?php echo $dato ["hora"]; ?> </td>
+            <td > <?php echo $dato ["personas"]; ?> </td>
             <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#eliminarReserva" data-id="<?php echo $dato['id_reservas']?>">Reserva Cumplida</button></td>
             <td><button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#eliminarReserva" data-id="<?php echo $dato['id_reservas']?>">Anular Reserva</button></td>
           </tr>
@@ -124,6 +126,7 @@ error_reporting(E_ALL ^ E_WARNING);
 		  modal.find('.modal-body #email').val(email)
 		  modal.find('.modal-body #fecha').val(fecha)
       modal.find('.modal-body #hora').val(hora)
+      modal.find('.modal-body #persona').val(personas)
 		  $('.alert').hide();//Oculto alert
 		})
     </script> 
