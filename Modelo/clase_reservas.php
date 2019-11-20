@@ -63,11 +63,11 @@ class Reserva{
             }
     }
 
-    public function insertarReserva($nombre,$apellido,$email,$telefono,$fecha,$hora, $id_reservas){ // los parametros son los argumentos de la tabla escritores
+    public function insertarReserva($nombre,$apellido,$email,$telefono,$fecha,$hora){ // los parametros son los argumentos de la tabla escritores
         $modelo = new Conexion(); //modelo es un objeto de la class conexion 
         $con = $modelo->get_conexion(); // y en con se va a guardar la coneccion 
-        $sql="INSERT INTO listado_reservas (nombre, apellido , email, telefono, fecha, hora, id_reservas) 
-              VALUES (:nombre, :apellido, :email, :telefono, :fecha, :hora, :id_reservas)";
+        $sql="INSERT INTO listado_reservas (nombre, apellido , email, telefono, fecha, hora) 
+              VALUES (:nombre, :apellido, :email, :telefono, :fecha, :hora)";
         
         $statement = $con->prepare($sql);
         $statement->bindParam (':nombre', $nombre,PDO::PARAM_STR); //bindparam para evitar el sqlinjection 
@@ -76,9 +76,9 @@ class Reserva{
         $statement->bindParam (':telefono', $telefono,PDO::PARAM_STR);
         $statement->bindParam (':fecha', $fecha,PDO::PARAM_STR);
         $statement->bindParam (':hora', $hora,PDO::PARAM_STR);
-        $statement->bindParam (':id_reservas', $id_reservas,PDO::PARAM_STR);
+        //$statement->bindParam (':comensales', $id_reservas,PDO::PARAM_STR);
 
-        echo $nombre .$apellido .$email  .$telefono .$fecha .$hora .$id_reservas; 
+        echo $nombre .$apellido .$email  .$telefono .$fecha .$hora; 
         
         if(!$statement){
             return "Error al crear el registro";

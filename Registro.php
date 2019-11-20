@@ -23,63 +23,65 @@
       <div class="card-body" id="card-body">
         <div class="row">
           <div class="col-sm-12">
-            <table class="table table-striped table-dark">
-              <thead>
-                <tr>
-                  <th scope="col">Fecha</th>
-                  <th scope="col">Hora</th>
-                  <th scope="col">Cantidad de Personas</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                <?php
-                //Solo se dibuja el final de la tabla si los datos están seteados y vinieron de Reserva.php
-                  if(!empty($_POST['datepicker']) and !empty($_POST['hora']) and !empty($_POST['comensales'])){
-                    $fecha = $_POST['datepicker'];
-                    $hora = $_POST['hora'];
-                    $comensales = $_POST['comensales'];
-                
-                ?>
-
-                  <td scope="row"> <?php echo $fecha; ?></td>
-                  <td scope="row"> <?php echo $hora; ?> </td>
-                  <td scope="row"> <?php echo $comensales; ?> </td>
+            <form method="post" action="./Controlador/insertarReserva.php"> 
+              <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Cantidad de Personas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                  <?php
+                  //Solo se dibuja el final de la tabla si los datos están seteados y vinieron de Reserva.php
+                    if(!empty($_POST['datepicker']) and !empty($_POST['hora']) and !empty($_POST['comensales'])){
+                      $fecha = $_POST['datepicker'];
+                      $hora = $_POST['hora'];
+                      $comensales = $_POST['comensales'];
                   
-                <?php
-                  }
-                ?>
-                </tr>
-              </tbody>
-            </table>
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Nombre</label>
-                  <input type="nombre" class="form-control" id="inputEmail4" placeholder="nombre">
+                  ?>
+
+                    <td scope="row" > <?php echo $fecha; ?></td>
+                    <td scope="row" > <?php echo $hora; ?> </td>
+                    <td scope="row" > <?php echo  $comensales; ?> </td>
+                    
+                  <?php
+                    }
+                  ?>
+                  </tr>
+                </tbody>
+              </table>  
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Nombre</label>
+                    <input type="nombre" class="form-control" id="inputEmail4" placeholder="nombre" name="nombre">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Apellido</label>
+                    <input type="apellido" class="form-control" id="inputEmail4" placeholder="apellido" name="apellido">
+                  </div>        
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Apellido</label>
-                  <input type="apellido" class="form-control" id="inputEmail4" placeholder="apellido">
-                </div>        
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputPassword4">Telefono</label>
-                  <input type="telefono" class="form-control" id="inputPassword4" placeholder="telefono">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputPassword4">Email</label>
-                  <input type="email" class="form-control" id="inputPassword4" placeholder="email">
-                </div>
-              
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                    <label class="form-check-label" for="invalidCheck2">Terminos y condiciones</label>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Telefono</label>
+                    <input type="telefono" class="form-control" id="inputPassword4" placeholder="telefono" name="telefono">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Email</label>
+                    <input type="email" class="form-control" id="inputPassword4" placeholder="email" name="email">
+                  </div> 
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                      <label class="form-check-label" for="invalidCheck2">Terminos y condiciones</label>
                   </div>
                 </div>             
               </div>
+              <input type="hidden"   name="fecha" value="<?php echo $fecha ?>">
+              <input type="hidden"   name="hora" value="<?php echo $hora ?>">
+              <input type="hidden"   name="comensales" value="<?php echo $comensales ?>">
               <button class="btn btn-primary" type="submit">Reservar</button>
             </form>
           </div>

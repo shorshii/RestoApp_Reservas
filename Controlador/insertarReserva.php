@@ -4,17 +4,17 @@ require_once ('../Modelo/clase_reservas.php');   //require_once importa funcione
 
 $mensaje = null;
 
-$id_reservas = $_POST ['id_reservas'];
 $nombre = $_POST ["nombre"];
 $apellido = $_POST ["apellido"];
 $email = $_POST ["email"];
 $telefono = $_POST ["telefono"];
 $fecha = $_POST ["fecha"];
 $hora= $_POST ["hora"];
+$comensales = $_POST["comensales"];
 
 if(count_chars($nombre)>0 && count_chars($apellido) > 0 && count_chars($email) > 0 && count_chars($telefono) > 0  && count_chars($fecha) > 0  && count_chars($hora) > 0 ){
   $actReserva = new reserva;
-  $mensaje = $actReserva->insertarReserva($nombre,$apellido,$email,$telefono, $id_reservas, $fecha, $hora);
+  $mensaje = $actReserva->insertarReserva($nombre,$apellido,$email,$telefono, $fecha, $hora);
 }else{
     echo "Faltan campos por completar";
 }

@@ -56,7 +56,7 @@
                                     </select>
                                 </div>
                                 <div class="footer">
-                                    <input id="reservarBtn" type="submit" class="btn btn-primary btn-lg" value="Reservar" onclick="JavaScript:displayReserva()"> </input>
+                                    <input id="reservarBtn" type="submit" class="btn btn-primary btn-lg" value="Reservar"> </input>
                                 </div>
                             </div>         
                             <div class="col-sm-4">
@@ -70,7 +70,6 @@
                 </form>
             </div>
         </div> 
-    <script src="./js/reserva.js"  type="text/javascript" type="module"></script>
    </body>
 </html>
 
