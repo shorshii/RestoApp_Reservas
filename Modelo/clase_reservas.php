@@ -1,16 +1,19 @@
 <?php
 
 class Reserva{
-    public function mostrarReserva($id_reservas){ //cargar todos las reservas 
+    //public function mostrarReserva($id_reservas){ //cargar todos las reservas 
+        public function mostrarReserva(){ 
             $rows = null;  // un array nulo
             $modelo = new Conexion(); // objeto de coneccion
             $con = $modelo->get_conexion(); // modelo agarra la conecion y la guarda
             $sql = "SELECT id_reservas, nombre, apellido, email, telefono ,fecha, hora
                     FROM  listado_reservas
-                    WHERE id_reservas = :id_reservas
                     ORDER BY fecha AND hora DESC"; // consulta
+                    //WHERE id_reservas = :id_reservas
+                    //ORDER BY fecha AND hora DESC"; // consulta
             $statement = $con->prepare($sql); //prepare ejecuta la consulta sql y la guarda en statement 
-            $statement->bindParam (':id_reservas', $id_reservas);
+            //$statement->bindParam (':id_reservas', $id_reservas);
+            //Las lineas comentadas marcas con ****DESCOMENTAR**** es por si quieren hacer busqueda por ID o crear un metodo nuevo que busque por ID
             $statement->execute(); // se ejecuta 
             while ($resultado = $statement->fetch()){ //recorre el resultado con el while - la funcion fetch guarda el resultado de la consulta en array de row que era null
                 $rows[] = $resultado;

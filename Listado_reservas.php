@@ -44,11 +44,14 @@ error_reporting(E_ALL ^ E_WARNING);
         <tbody id="datos">
           <?php
       
-          //if (isset($_POST["ID"])){
+          //if (isset($_POST["ID"])){       ///como que aca tendria que conectar con la tabla de la base de datos
             //$id_reservas = $_POST["ID"];
-            $id_reservas = 1;
+            //$id_reservas = 1;
             $Cont_Reservas = new Reserva; 
-            $sql = $Cont_Reservas->mostrarReserva($id_reservas);
+            //Comentar la linea de abajo si se quiere buscar por ID
+            $sql = $Cont_Reservas->mostrarReserva();
+            //Descomentar la linea de abajo si se quiere buscar por ID
+            //$sql = $Cont_Reservas->mostrarReserva($id_reservas);
           //}
               
           foreach ($sql as $dato){?>

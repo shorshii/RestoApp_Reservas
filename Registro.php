@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,6 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
     <title>Registro - RestoApp</title>
 </head>
   <body> 
@@ -23,16 +23,33 @@
       <div class="card-body" id="card-body">
         <div class="row">
           <div class="col-sm-12">
-            <table class="table">
-              <thead class="thead-dark">
+            <table class="table table-striped table-dark">
+              <thead>
                 <tr>
-                  <th>Fecha</th>
-                  <th>Hora</th>
-                  <th>Cantidad de Personas</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Cantidad de Personas</th>
                 </tr>
               </thead>
-              <tbody id="datosRegistro">
-      
+              <tbody>
+                <tr>
+                <?php
+                //Solo se dibuja el final de la tabla si los datos están seteados y vinieron de Reserva.php
+                  if(!empty($_POST['datepicker']) and !empty($_POST['hora']) and !empty($_POST['comensales'])){
+                    $fecha = $_POST['datepicker'];
+                    $hora = $_POST['hora'];
+                    $comensales = $_POST['comensales'];
+                
+                ?>
+
+                  <td scope="row"> <?php echo $fecha; ?></td>
+                  <td scope="row"> <?php echo $hora; ?> </td>
+                  <td scope="row"> <?php echo $comensales; ?> </td>
+                  
+                <?php
+                  }
+                ?>
+                </tr>
               </tbody>
             </table>
             <form>
@@ -68,8 +85,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <script src="./js/registro.js"   type="module"></script>               
+    </div>          
   </body>
 </html>
 
