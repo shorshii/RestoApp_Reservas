@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2019 a las 01:34:57
+-- Tiempo de generación: 20-11-2019 a las 01:29:07
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.8
 
@@ -43,7 +43,9 @@ CREATE TABLE `listado_reservas` (
 --
 
 INSERT INTO `listado_reservas` (`id_reservas`, `nombre`, `apellido`, `email`, `telefono`, `fecha`, `hora`) VALUES
-(1, 'Lorena', 'Santiri', 'lsantiri@gmail.com', 1163859641, '2019-11-15', 2000);
+(1, 'Lorena', 'Santiri', 'lsantiri@gmail.com', 1163859641, '2019-11-15', 2000),
+(2, 'Giannina', 'Sosa', 'gsosa@hotmail.com', 1158964125, '2019-11-30', 2030),
+(3, 'Valeria', 'Martinez', 'Valetodo@yahoo,com.ar', 1153859674, '2019-11-23', 2200);
 
 -- --------------------------------------------------------
 
@@ -88,7 +90,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `listado_reservas`
 --
 ALTER TABLE `listado_reservas`
-  MODIFY `id_reservas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_reservas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
