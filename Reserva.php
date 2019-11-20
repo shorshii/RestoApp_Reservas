@@ -43,7 +43,6 @@
                                         <option>4</option>
                                         <option>5</option>
                                         <option>6</option>
-                                        <option>Solicitar llamada para disponibilidad</option>
                                     </select>
                                 </div>
                                 <p>Hora</p>

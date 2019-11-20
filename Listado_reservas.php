@@ -80,32 +80,25 @@ error_reporting(E_ALL ^ E_WARNING);
     <div class="modal-dialog">
 
     <!-- Modal content-->
-    <div class="modal-content" id="modal">
+      <div class="modal-content" id="modal">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Anular Reserva</h4>
+          <h4 class="modal-title">Anular Reserva</h4>
         </div>
-        <div class="modal-body" id="modal-body">
-          <form>
-            <div class="form-group">
-              <input type="hidden" name="id_reservas" class="form-control" id="id_reservas">
-            </div>
-
-            <div class="form-group">
-              <label>¿Seguro que quiere anular esta reserva?</label>
+        <div class="modal-body" id="modal-body"> 
+          <div class="form-group">
+            <label>¿Seguro que quiere anular esta reserva?</label>
               <?php
               echo $id
               ?>
-            </form>
-        </div>
+          </div>
           <div class="modal-footer">
+            <input type="hidden" name="id_reservas" class="form-control" value="<?php echo $id ?>">
             <input type="submit" class="btn btn-default" dismiss="modal" value="Aceptar" id="boton" >
           </div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-  </div>
 </form>
 
 <script>
