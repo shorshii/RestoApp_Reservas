@@ -40,6 +40,7 @@
                       $fecha = $_POST['datepicker'];
                       $hora = $_POST['hora'];
                       $personas = $_POST['personas'];
+                      //esto es un comentario
                   
                   ?>
 
