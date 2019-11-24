@@ -1,10 +1,14 @@
-<?php
-
+﻿<?php
+session_start();
 require_once ('./Modelo/mysqol-login.php');
 require_once ('./Modelo/clase_reservas.php'); 
 error_reporting(E_ALL ^ E_WARNING);
-//session_start();
+if(!isset($_SESSION['username']))
+{
+  echo '<script language="javascript">alert("Area Restringida");window.location.href="index.php"</script>';
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +28,7 @@ error_reporting(E_ALL ^ E_WARNING);
 <div class="container">
 <div class="card" id="card">
 <nav>
-<button type="button" class="btn btn-secondary" style="float:right;" data-toggle="modal" data-target="#cerrarSesion" data-id="cerrarSesion.php>">Cerrar Sesion</button>
+<a href='controlador/cerrarSesion.php'><button type="button" class="btn btn-secondary" style="float:right;" data-toggle="modal" data-target="#cerrarSesion" data-id="cerrarSesion.php>">Cerrar Sesion</button></a>
 </nav>
    <h1>Reservas</h1>
       <table class="table table-striped">
@@ -121,7 +125,7 @@ error_reporting(E_ALL ^ E_WARNING);
       modal.find('.modal-body #hora').val(hora)
       modal.find('.modal-body #persona').val(personas)
 		  $('.alert').hide();//Oculto alert
-		})
+
     </script> 
 
     

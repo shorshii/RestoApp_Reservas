@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['username']))
+{
+  header('Location: Listado_reservas.php');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,21 +64,21 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Nombre</label>
-                    <input type="nombre" class="form-control" id="inputEmail4" placeholder="nombre" name="nombre">
+                    <input type="nombre" class="form-control" id="inputEmail4" placeholder="nombre" name="nombre" required>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Apellido</label>
-                    <input type="apellido" class="form-control" id="inputEmail4" placeholder="apellido" name="apellido">
+                    <input type="apellido" class="form-control" id="inputEmail4" placeholder="apellido" name="apellido" required>
                   </div>        
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputPassword4">Telefono</label>
-                    <input type="telefono" class="form-control" id="inputPassword4" placeholder="telefono" name="telefono">
+                    <input type="telefono" class="form-control" id="inputPassword4" placeholder="telefono" name="telefono" required> 
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputPassword4">Email</label>
-                    <input type="email" class="form-control" id="inputPassword4" placeholder="email" name="email">
+                    <input type="email" class="form-control" id="inputPassword4" placeholder="email" name="email" required>
                   </div> 
                   <div class="form-group">
                     <div class="form-check">

@@ -1,13 +1,11 @@
 <?php
-require_once ('../Modelo/mysqol-login.php');
 require_once ('../Modelo/Clase_Login.php');
 $mensaje = null;
 
 $username = $_POST ['username'];
 $password = $_POST ["passwords"];
 
-
-if(count_chars($username)>0 && count_chars($password) > 0 ){
+  if (!empty($username) || !empty($password)){
   try {
     $usuario = new Usuario;
     $mensaje = $usuario->consultarUsuario($username,$password);

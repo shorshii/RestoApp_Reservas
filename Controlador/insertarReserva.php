@@ -12,7 +12,8 @@ $fecha = $_POST ["fecha"];
 $hora= $_POST ["hora"];
 $personas = $_POST["personas"];
 
-if(count_chars($nombre)>0 && count_chars($apellido) > 0 && count_chars($email) > 0 && count_chars($telefono) > 0  && count_chars($fecha) > 0  && count_chars($hora) > 0 && count_chars($personas) > 0 ){
+if (!empty($nombre) || !empty($apellido) || !empty($email) || !empty($telefono) || !empty($fecha) || !empty($hora) || !empty($personas))
+{
   $actReserva = new reserva;
   $mensaje = $actReserva->insertarReserva($nombre,$apellido,$email,$telefono, $fecha, $hora, $personas);
 }else{

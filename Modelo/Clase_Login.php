@@ -1,23 +1,46 @@
 <?php
-
+require_once "mysqol-login.php";
 class Usuario{
-    public function consultarUsuario($username,$password){ //cargar todos los escritores
-        $rows = null;  // un array nulo
-        $modelo = new Conexion(); // objeto de coneccion
-        $con = $modelo->get_conexion(); // modelo agarra la conecion y la guarda
-        $sql = "SELECT *
-                FROM  usuarios
-                WHERE username = :username
-                AND passwords = :passwords"; // consulta
-        $statement = $con->prepare($sql); //prepare ejecuta la consulta sql y la guarda en statement 
-        $statement->bindParam (':username', $username);
-        $statement->bindParam (':passwords', $password);
-        $statement->execute(); // se ejecuta 
-      
-            while ($resultado = $statement->fetch()){ //recorre el resultado con el while - la funcion fetch guarda el resultado de la consulta en array de row que era null
-                $rows[] = $resultado;
-            }
-            return $rows;
-        }      
+    public $username;
+    public $passwords;
+  
+    public function __construct($username=null, $passwords=null) {
+        $this->username = $username;
+        $this->passwords = $passwords;
     }
+    public function getUsername() {
+        return $this->username;
+    }
+    public function getPasswords() {
+        return $this->passwords;
+    }
+    public function setUsername($username) {
+        $this->username= $username;
+    }
+    public function setPasswords($passwords) {
+        $this->passwords= $passwords;
+    }
+    public function Login(){ 
+        $model = new Conexion(); //Creamos una conexion 
+        $con = $model->get_conexion(); //Conectamos
+        $sql = 'SELECT * FROM usuarios WHERE username=:username AND passwords=:passwords'; 
+        $query=$con->prepare($sql);
+        $query->execute(array(
+        ':username' => $this->username, 
+        ':passwords' => $this->passwords));
+        $data = $query->fetchAll(PDO::FETCH_OBJ);
+        $user = $this->username;
+        $pass = $this->passwords;
+        if($user == "admin" && $pass == "admin")
+        {
+            $_SESSION['username'] = $this->username; // Storing user session value
+            header('Location: Listado_reservas.php');
+            exit();
+        }
+        else
+        {
+            echo 'Datos Incorrectos';
+        } 
+        }        
+}
  ?>

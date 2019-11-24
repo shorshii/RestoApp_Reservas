@@ -2,7 +2,7 @@
 
 // configuracion de bd
 class Conexion {
-    static function get_conexion (){
+    static function get_conexion(){
         $hostname='localhost';
         $database='reservas';
         $username='root';
