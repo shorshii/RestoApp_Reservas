@@ -36,7 +36,7 @@ error_reporting(E_ALL ^ E_WARNING);
                 <form>                    
                   <div class="form-group">
                     <label>Usuario</label>
-                    <input type="text" name="username" id="username" class="form-control validate" placeholder="Usuario">
+                    <input type="text" name="username" id="username" class="form-control validate" placeholder="Usuario" required>
                   </div>
                   <div class="form-group">
                     <label >Contraseña</label>

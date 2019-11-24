@@ -43,14 +43,7 @@ CREATE TABLE `listado_reservas` (
 -- Volcado de datos para la tabla `listado_reservas`
 --
 
-INSERT INTO `listado_reservas` (`id_reservas`, `nombre`, `apellido`, `email`, `telefono`, `fecha`, `hora`, `personas`) VALUES
-(1, 'Lorena', 'Santiri', 'lsantiri@gmail.com', 1163859641, '2019-11-1', '2000', 2),
-(2, 'Giannina', 'Sosa', 'gsosa@hotmail.com', 1158964125, '2019-11-3', '2030', 4),
-(3, 'Valeria', 'Martinez', 'Valetodo@yahoo,com.ar', 1153859674, '2019-11-2', '2200', 5),
-(4, 'Ignacio', 'Gomez Calazanz', 'shorshinitah@fghj.co', 1552857496, '11/19/2019', '22:00', 4),
-(5, 'Alejandra', 'Gutierrez', 'alegu@yahoo.com', 1554788596, '22/11/2019', '22:00', 3),
-(6, 'Florencia', 'Calvo', 'florcita@hotmail.com', 1234567890, '11/29/2019', '22:00', 3),
-(7, 'Alondra', 'Pallas', 'apallas@hotmail.com', 1563968523, '11/23/2019', '23:00', 4);
+
 
 -- --------------------------------------------------------
 
@@ -95,7 +88,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `listado_reservas`
 --
 ALTER TABLE `listado_reservas`
-  MODIFY `id_reservas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_reservas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

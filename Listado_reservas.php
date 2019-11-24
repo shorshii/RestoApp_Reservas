@@ -33,8 +33,8 @@ error_reporting(E_ALL ^ E_WARNING);
             <th scope="col"></th>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
-            <th scope="col">Telefono</th>
             <th scope="col">Email</th>
+            <th scope="col">Telefono</th>
             <th scope="col">Fecha</th>
             <th scope="col">Hora</th>
             <th scope="col">Personas</th>
