@@ -104,7 +104,7 @@ if(!isset($_SESSION['username']))
       </div>
     </div>
 </form>
-
+<!-- 
 <script>
     $('#eliminarReserva').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget) // Botón que activó el modal
@@ -127,7 +127,7 @@ if(!isset($_SESSION['username']))
 		  $('.alert').hide();//Oculto alert
 
     </script> 
-
+ -->
     
 </body>  
 </html>

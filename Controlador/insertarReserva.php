@@ -20,6 +20,7 @@ if (!empty($nombre) || !empty($apellido) || !empty($email) || !empty($telefono) 
     echo "Faltan campos por completar";
 }
 
-echo $mensaje;
-header("Location: ../index.php");
+echo $mensaje; 
+//mantener comentado para que no se redireccione aqui.
+  //header("Location: ../index.php"); 
 ?>
