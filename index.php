@@ -81,7 +81,7 @@ if(isset($_SESSION['username']))
                                 </div>
                             </div>         
                             <div class="col-sm-4">
-                                <p>Bienvenido!</p>
+                                <p >Bienvenido!</p>
                                 <p>Aca puedes seleccionar la fecha de tu reserva. Te pedimos que selecciones la cantidad de comensales y la hora en la que vendrán.
                                 <p> Los esperamos!</p>
                             </div>
