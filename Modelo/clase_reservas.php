@@ -8,7 +8,7 @@ class Reserva{
             $con = $modelo->get_conexion(); // modelo agarra la conecion y la guarda
             $sql = "SELECT id_reservas, nombre, apellido, email, telefono ,fecha, hora, personas
                     FROM  listado_reservas
-                    ORDER BY fecha AND hora DESC"; // consulta
+                    ORDER BY fecha ASC"; // consulta ordenada por fecha 
                     //WHERE id_reservas = :id_reservas
                     //ORDER BY fecha AND hora DESC"; // consulta
             $statement = $con->prepare($sql); //prepare ejecuta la consulta sql y la guarda en statement 

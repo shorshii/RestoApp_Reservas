@@ -28,20 +28,20 @@ if(!isset($_SESSION['username']))
 <div class="container">
 <div class="card" id="card">
 <nav>
-<a href='controlador/cerrarSesion.php'><button type="button" class="btn btn-secondary" style="float:right;" data-toggle="modal" data-target="#cerrarSesion" data-id="cerrarSesion.php>">Cerrar Sesion</button></a>
+<a href='controlador/cerrarSesion.php'><button type="button" class="btn btn-danger" style="float:right;" data-toggle="modal" data-target="#cerrarSesion" data-id="cerrarSesion.php>">Cerrar Sesion</button></a>
 </nav>
    <h1>Reservas</h1>
       <table class="table table-striped">
         <thead>
           <tr id="tabla">
             <th scope="col"></th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
-            <th scope="col">Email</th>
-            <th scope="col">Telefono</th>
-            <th scope="col">Fecha</th>
-            <th scope="col">Hora</th>
-            <th scope="col">Personas</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">APELLIDO</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">TELEFONO</th>
+            <th scope="col">FECHA</th>
+            <th scope="col">HORA</th>
+            <th scope="col">COMENSALES</th>
             <th> &nbsp;</th>
             <th> &nbsp;</th>
           </tr>
@@ -78,12 +78,12 @@ if(!isset($_SESSION['username']))
                ?> 
       </table>
      
-  <!-- Modal Eliminar la reserva-->
+  <!-- Modal accion eliminar la reserva-->
 <form method="post" id="eliminarDatos" action="Controlador/eliminarReserva.php">
   <div class="modal fade" id="eliminarReserva">
     <div class="modal-dialog">
 
-    <!-- Modal content-->
+    <!-- Modal contenido-->
       <div class="modal-content" id="modal">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -92,9 +92,6 @@ if(!isset($_SESSION['username']))
         <div class="modal-body" id="modal-body"> 
           <div class="form-group">
             <label>¿Seguro que quiere anular esta reserva?</label>
-              <?php
-              echo $id
-              ?>
           </div>
           <div class="modal-footer">
             <input type="hidden" name="id_reservas" class="form-control" value="<?php echo $id ?>">
@@ -105,7 +102,7 @@ if(!isset($_SESSION['username']))
     </div>
 </form>
 <!-- 
-<script>
+<script> 
     $('#eliminarReserva').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget) // Botón que activó el modal
       var id = button.data('id') // Extraer la información de atributos de datos

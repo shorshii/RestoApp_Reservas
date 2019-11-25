@@ -15,7 +15,7 @@ require 'Modelo/Clase_Login.php';
       }
     }
   }
-?>
+?><!--  inicio de sesion + coneccion a BD -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,10 +32,10 @@ require 'Modelo/Clase_Login.php';
     <div class="container">
       <h2> &nbsp;</h2>
       <!-- Modal content-->
-      <form id="consultarUsuario" method="post" action="<?=$_SERVER['PHP_SELF'];?>">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content" id="modal">
+      <form id="consultarUsuario" method="post" action="<?=$_SERVER['PHP_SELF'];?>"> <!-- inicia la sesion al consultar la funcion consultarUsuario en controlador -->
+            <div class="modal-dialog">  
+              <!-- Modal content--> 
+              <div class="modal-content" id="modal"> 
                 <div class="modal-header">
                   <h4 class="modal-title">Iniciar Sesion</h4>
                 </div>
@@ -50,7 +50,7 @@ require 'Modelo/Clase_Login.php';
                     </div>            
                 </div>
                 <div class="modal-footer">
-                  <input type="submit" name="logear" id="logear" class="btn btn-secondary btn-lg text-uppercase"  value="Acceder" >
+                  <input type="submit" name="logear" id="logear" class="btn btn-primary btn-lg text-uppercase"  value="Acceder" >
                 </div>
               </div>
             </div>
